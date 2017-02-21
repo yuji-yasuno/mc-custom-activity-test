@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   post '/execute', to: 'interaction#execute'
 
-  post '/savera', to: 'interaction#save'
+  post '/save', to: 'interaction#save'
 
   post '/publish', to: 'interaction#publish'
 
