@@ -18,7 +18,7 @@
     "inArguments": [],
     "outArguments": [],
     "timeout": 3000,
-    "uri": "",
+    "uri": "https://custom-activity-test.herokuapp.com/execute",
     "useJwt": false,
     "verb": "POST"
   },
@@ -26,7 +26,7 @@
     "body": "",
     "format": "json",
     "timeout": 3000,
-    "uri": "",
+    "uri": "https://custom-activity-test.herokuapp.com/save",
     "useJwt": false,
     "verb": "POST"
   },
@@ -34,7 +34,7 @@
     "body": "",
     "format": "json",
     "timeout": 3000,
-    "uri": "",
+    "uri": "https://custom-activity-test.herokuapp.com/publish",
     "useJwt": false,
     "verb": "POST"
   },
@@ -42,13 +42,13 @@
     "body": "",
     "format": "json",
     "timeout": 3000,
-    "uri": "",
+    "uri": "https://custom-activity-test.herokuapp.com/validate",
     "useJwt": false,
     "verb": "POST"
   },
   "edit": {
-    "height": 400,
-    "uri": "",
-    "width": 500
+    "height": 480,
+    "uri": "https://custom-activity-test.herokuapp.com/",
+    "width": 600
   }
 }
