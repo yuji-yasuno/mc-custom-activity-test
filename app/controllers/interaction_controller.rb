@@ -1,6 +1,6 @@
 class InteractionController < ApplicationController
   protect_from_forgery with: :null_session
-  after_action :allow_iframe
+
   def execute
     log_json
     render text: 'OK', status: 200
@@ -31,7 +31,5 @@ class InteractionController < ApplicationController
     logger.info("json: #{json_request}")
   end
 
-  def allow_iframe
-    response.headers.except! 'X-Frame-Options'
-  end
+
 end
