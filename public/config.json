@@ -2,9 +2,9 @@
   "version": "1.0",
   "apiVersion": "1.0",
   "category": "messaging",
-  "icon": "",
-  "iconSmall": "",
-  "key": "",
+  "icon": "icon.png",
+  "iconSmall": "iconsmall.png",
+  "key": "custom-activity-test.herokuapp.com",
   "lang": {
     "en-US": {
       "description": "",
