@@ -4,6 +4,8 @@ require(['jquery', 'postmonger'], function ($, Postmonger) {
     console.log('connection: ');
     console.log(connection);
 
+    connection.trigger('updateButton', { button: 'next', text: 'done', visible: true });
+
     connection.on('initActivity', function (payload) {
         console.log('on initActivity');
         console.log('payload:');
@@ -56,8 +58,8 @@ require(['jquery', 'postmonger'], function ($, Postmonger) {
             console.log('save clicked');
             connection.trigger('updateActivity', {});
             console.log('triggered updateActivity.');
-            //connection.trigger('destroy');
-            //console.log('triggered destroy.');
+            connection.trigger('destroy');
+            console.log('triggered destroy.');
         });
     });
 });
