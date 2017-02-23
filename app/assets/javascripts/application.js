@@ -46,7 +46,7 @@ require(['jquery', 'postmonger'], function ($, Postmonger) {
         console.log(interaction);
     });
 
-    $(document).ready(function() {
+    $(window).ready(function() {
         console.log('window.ready()');
         connection.trigger('ready');
         connection.trigger('requestTokens');
