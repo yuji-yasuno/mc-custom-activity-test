@@ -32,8 +32,8 @@ require(['jquery', 'postmonger'], function ($, Postmonger) {
         console.log('on requestedInteractionDefaults');
     });
 
-    $(window).load(function() {
-        console.log('window.load()');
+    $(document).ready(function() {
+        console.log('window.ready()');
         connection.trigger('ready');
         connection.trigger('requestTokens');
         connection.trigger('requestEndpoints');
