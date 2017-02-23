@@ -56,8 +56,8 @@ require(['jquery', 'postmonger'], function ($, Postmonger) {
             console.log('save clicked');
             connection.trigger('save');
             console.log('triggered save.');
-            connection.trigger('destroy');
-            console.log('triggered destroy.');
+            //connection.trigger('destroy');
+            //console.log('triggered destroy.');
         });
     });
 });
