@@ -54,8 +54,8 @@ require(['jquery', 'postmonger'], function ($, Postmonger) {
 
         $('#save-btn').on('click', function() {
             console.log('save clicked');
-            connection.trigger('save');
-            console.log('triggered save.');
+            connection.trigger('updateActivity', {});
+            console.log('triggered updateActivity.');
             //connection.trigger('destroy');
             //console.log('triggered destroy.');
         });
