@@ -46,10 +46,16 @@ require(['jquery', 'postmonger'], function ($, Postmonger) {
         console.log(interaction);
     });
 
-    $(window).ready(function() {
-        console.log('window.ready()');
+    $(document).ready(function() {
+        console.log('document.ready()');
         connection.trigger('ready');
         connection.trigger('requestTokens');
         connection.trigger('requestEndpoints');
+
+        $('#save-btn').on('click', function() {
+            console.log('save clicked');
+            connection.trigger('save');
+            connection.trigger('destroy');
+        });
     });
 });
