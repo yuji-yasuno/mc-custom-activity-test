@@ -1,4 +1,5 @@
 require(['jquery', 'postmonger'], function ($, Postmonger) {
+    console.log('required jquery and postmonger');
     var connection = new Postmonger.Session();
 
     connection.on('initActivity', function () {
