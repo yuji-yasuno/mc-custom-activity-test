@@ -5,8 +5,13 @@
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= requirejs_include_tag 'application' %>
+    <%= javascript_include_tag '/assets/require.js' %>
+    <script>
+        require.config({"baseUrl":"/assets"});
+    </script>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
+
   <body>
     <%= yield %>
   </body>
