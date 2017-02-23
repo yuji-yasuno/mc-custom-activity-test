@@ -1,6 +1,8 @@
 require(['jquery', 'postmonger'], function ($, Postmonger) {
     console.log('required jquery and postmonger');
     var connection = new Postmonger.Session();
+    console.log('connection: ');
+    console.log(connection);
 
     connection.on('initActivity', function () {
         console.log('on initActivity');
@@ -31,6 +33,7 @@ require(['jquery', 'postmonger'], function ($, Postmonger) {
     });
 
     $(window).load(function() {
+        console.log('window.load()');
         connection.trigger('ready');
         connection.trigger('requestTokens');
         connection.trigger('requestEndpoints');
