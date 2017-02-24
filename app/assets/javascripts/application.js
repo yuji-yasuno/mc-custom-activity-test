@@ -33,8 +33,8 @@ require(['jquery', 'postmonger'], function ($, Postmonger) {
         console.log('activityPayload:');
         console.log(activityPayload);
         console.log('triggered updateActivity.');
-        connection.trigger('destroy');
-        console.log('triggered destroy.');
+        //connection.trigger('destroy');
+        //console.log('triggered destroy.');
     });
 
     connection.on('clickedBack', function () {
@@ -69,8 +69,8 @@ require(['jquery', 'postmonger'], function ($, Postmonger) {
             console.log('activityPayload:');
             console.log(activityPayload);
             console.log('triggered updateActivity.');
-            connection.trigger('destroy');
-            console.log('triggered destroy.');
+            //connection.trigger('destroy');
+            //console.log('triggered destroy.');
         });
     });
 });
