@@ -4,59 +4,63 @@ require(['jquery', 'postmonger'], function ($, Postmonger) {
     console.log('connection: ');
     console.log(connection);
 
-    connection.trigger('updateButton', { button: 'next', text: 'done', visible: true });
+    //connection.trigger('updateButton', { button: 'next', text: 'done', visible: true });
 
     connection.on('initEvent', function (payload) {
-        console.log('on initEvent');
+        console.log('=== on initEvent ===');
         console.log('payload:');
         console.log(payload);
     });
 
     connection.on('requestedTokens', function (tokens) {
-        console.log('on requestedTokens');
+        console.log('=== on requestedTokens ===');
         console.log('tokens:');
         console.log(tokens);
     });
 
     connection.on('requestedEndpoints', function (endpoints) {
-        console.log('on requestedEndpoints');
+        console.log('=== on requestedEndpoints ===');
         console.log('endpoints:');
         console.log(endpoints);
     });
 
     connection.on('clickedNext', function () {
-        console.log('on clickedNext');
+        console.log('=== on clickedNext ===');
+        connection.trigger('updateEvent', {});
+        console.log('triggered updateActivity.');
+        connection.trigger('destroy');
+        console.log('triggered destroy.');
     });
 
     connection.on('clickedBack', function () {
-        console.log('on clickedBack');
+        console.log('=== on clickedBack ===');
     });
 
     connection.on('gotoStep', function () {
-        console.log('on gotoStep');
+        console.log('=== on gotoStep ===');
     });
 
     connection.on('requestedInteractionDefaults', function (settings) {
-        console.log('on requestedInteractionDefaults');
+        console.log('=== on requestedInteractionDefaults ===');
         console.log('settings:');
         console.log(settings);
     });
 
     connection.on('requestedInteraction', function (interaction) {
-        console.log('on requestedInteractionDefaults');
+        console.log('=== on requestedInteractionDefaults ===');
         console.log('interaction:');
         console.log(interaction);
     });
 
     $(document).ready(function() {
-        console.log('document.ready()');
+        console.log('--- document.ready() ---');
         connection.trigger('ready');
         connection.trigger('requestTokens');
         connection.trigger('requestEndpoints');
 
         $('#save-btn').on('click', function() {
-            console.log('save clicked');
-            connection.trigger('updateActivity', {});
+            console.log('---  save clicked ---');
+            connection.trigger('updateEvent', {});
             console.log('triggered updateActivity.');
             connection.trigger('destroy');
             console.log('triggered destroy.');
