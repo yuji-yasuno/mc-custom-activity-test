@@ -4,12 +4,15 @@ require(['jquery', 'postmonger'], function ($, Postmonger) {
     console.log('connection: ');
     console.log(connection);
 
+    var activityPayload = {};
+
     //connection.trigger('updateButton', { button: 'next', text: 'done', visible: true });
 
-    connection.on('initEvent', function (payload) {
+    connection.on('initActivity', function (payload) {
         console.log('=== on initEvent ===');
         console.log('payload:');
         console.log(payload);
+        activityPayload = payload;
     });
 
     connection.on('requestedTokens', function (tokens) {
@@ -26,7 +29,9 @@ require(['jquery', 'postmonger'], function ($, Postmonger) {
 
     connection.on('clickedNext', function () {
         console.log('=== on clickedNext ===');
-        connection.trigger('updateEvent', {});
+        connection.trigger('updateActivity', activityPayload);
+        console.log('activityPayload:');
+        console.log(activityPayload);
         console.log('triggered updateActivity.');
         connection.trigger('destroy');
         console.log('triggered destroy.');
@@ -60,7 +65,9 @@ require(['jquery', 'postmonger'], function ($, Postmonger) {
 
         $('#save-btn').on('click', function() {
             console.log('---  save clicked ---');
-            connection.trigger('updateEvent', {});
+            connection.trigger('updateActivity', activityPayload);
+            console.log('activityPayload:');
+            console.log(activityPayload);
             console.log('triggered updateActivity.');
             connection.trigger('destroy');
             console.log('triggered destroy.');
