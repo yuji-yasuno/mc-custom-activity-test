@@ -59,5 +59,29 @@
       "height": 480,
       "width": 600
     }
+  },
+  "save": {
+    "body": "",
+    "format": "json",
+    "timeout": 3000,
+    "uri": "https://custom-activity-test.herokuapp.com/save",
+    "useJwt": false,
+    "verb": "POST"
+  },
+  "publish": {
+    "body": "",
+    "format": "json",
+    "timeout": 3000,
+    "uri": "https://custom-activity-test.herokuapp.com/publish",
+    "useJwt": false,
+    "verb": "POST"
+  },
+  "validate": {
+    "body": "",
+    "format": "json",
+    "timeout": 3000,
+    "uri": "https://custom-activity-test.herokuapp.com/validate",
+    "useJwt": false,
+    "verb": "POST"
   }
 }
