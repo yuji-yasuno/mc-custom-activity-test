@@ -26,6 +26,11 @@ class InteractionController < ApplicationController
     render text: 'OK', status: 200
   end
 
+  def stop
+    log_json
+    render text: 'OK', status: 200
+  end
+
   def log_json
     json_request = JSON.parse request.body.read
     logger.info("json: #{json_request}")
