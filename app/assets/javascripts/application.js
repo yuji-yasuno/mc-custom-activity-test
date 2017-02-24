@@ -29,6 +29,8 @@ require(['jquery', 'postmonger'], function ($, Postmonger) {
 
     connection.on('clickedNext', function () {
         console.log('=== on clickedNext ===');
+        activityPayload.metaData = activityPayload.metaData || {};
+        activityPayload.metaData.isConfigured = true;
         connection.trigger('updateActivity', activityPayload);
         console.log('activityPayload:');
         console.log(activityPayload);
@@ -65,6 +67,8 @@ require(['jquery', 'postmonger'], function ($, Postmonger) {
 
         $('#save-btn').on('click', function() {
             console.log('---  save clicked ---');
+            activityPayload.metaData = activityPayload.metaData || {};
+            activityPayload.metaData.isConfigured = true;
             connection.trigger('updateActivity', activityPayload);
             console.log('activityPayload:');
             console.log(activityPayload);
