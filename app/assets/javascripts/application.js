@@ -6,8 +6,8 @@ require(['jquery', 'postmonger'], function ($, Postmonger) {
 
     connection.trigger('updateButton', { button: 'next', text: 'done', visible: true });
 
-    connection.on('initActivity', function (payload) {
-        console.log('on initActivity');
+    connection.on('initEvent', function (payload) {
+        console.log('on initEvent');
         console.log('payload:');
         console.log(payload);
     });
