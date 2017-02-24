@@ -16,6 +16,11 @@ class InteractionController < ApplicationController
     render text: 'OK', status: 200
   end
 
+  def unpublish
+    log_json
+    render text: 'OK', status: 200
+  end
+
   def validate
     log_json
     render text: 'OK', status: 200

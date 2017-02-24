@@ -1,9 +1,10 @@
 {
-  "workflowApiVersion": "1.1",
+  "workflowApiVersion": "1.0",
   "metaData": {
     "icon": "icon.png",
     "iconSmall": "iconsmall.png",
-    "category": "messaging"
+    "category": "messaging",
+    "version": "1.0"
   },
   "type": "REST",
   "lang": {
@@ -42,6 +43,11 @@
       "verb": "POST",
       "useJwt": false
     },
+    "unpublish": {
+      "url": "https://custom-activity-test.herokuapp.com/unpublish",
+      "verb": "POST",
+      "useJwt": false
+    },
     "validate": {
       "url": "https://custom-activity-test.herokuapp.com/validate",
       "verb": "POST",
@@ -59,29 +65,5 @@
       "height": 480,
       "width": 600
     }
-  },
-  "save": {
-    "body": "",
-    "format": "json",
-    "timeout": 3000,
-    "uri": "https://custom-activity-test.herokuapp.com/save",
-    "useJwt": false,
-    "verb": "POST"
-  },
-  "publish": {
-    "body": "",
-    "format": "json",
-    "timeout": 3000,
-    "uri": "https://custom-activity-test.herokuapp.com/publish",
-    "useJwt": false,
-    "verb": "POST"
-  },
-  "validate": {
-    "body": "",
-    "format": "json",
-    "timeout": 3000,
-    "uri": "https://custom-activity-test.herokuapp.com/validate",
-    "useJwt": false,
-    "verb": "POST"
   }
 }

@@ -8,6 +8,8 @@ Rails.application.routes.draw do
 
   post '/publish', to: 'interaction#publish'
 
+  post '/unpublish', to: 'interaction#unpublish'
+
   post '/validate', to: 'interaction#validate'
 
   post '/edit', to: 'interaction#edit'
