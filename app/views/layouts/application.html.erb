@@ -8,9 +8,15 @@
     <%= javascript_include_tag '/require.js' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
   <body>
-    <%= yield %>
-  <button id="save-btn">save</button>
+  <div>
+    <label for="channelId">LINE Channel ID</label>
+  </div>
+  <div>
+    <input id="channelId" name="channelId" type="text" value=""/>
+  </div>
+  <div>
+    <button id="save-btn">SET Channel Id</button>
+  </div>
   </body>
 </html>

@@ -64,15 +64,13 @@ require(['jquery', 'postmonger'], function ($, Postmonger) {
         connection.trigger('requestEndpoints');
 
         $('#save-btn').on('click', function() {
-            console.log('---  save clicked ---');
-            activityPayload.metaData = activityPayload.metaData || {};
-            activityPayload.metaData.isConfigured = true;
-            connection.trigger('updateActivity', activityPayload);
+            console.log('---  save channelid ---');
+            activityPayload.arguments = activityPayload.arguments || {};
+            activityPayload.arguments.execute = activityPayload.arguments.execute || {};
+            activityPayload.arguments.execute.inArguments = activityPayload.arguments.execute.inArguments || {};
+            activityPayload.arguments.execute.inArguments.channelId = $('#channelId').val();
             console.log('activityPayload:');
             console.log(activityPayload);
-            console.log('triggered updateActivity.');
-            //connection.trigger('destroy');
-            //console.log('triggered destroy.');
         });
     });
 });
