@@ -68,8 +68,10 @@ require(['jquery', 'postmonger'], function ($, Postmonger) {
             activityPayload.arguments = activityPayload.arguments || {};
             activityPayload.arguments.execute = activityPayload.arguments.execute || {};
             activityPayload.arguments.execute.inArguments = activityPayload.arguments.execute.inArguments || [];
-            activityPayload.arguments.execute.inArguments = activityPayload.arguments.execute.inArguments.push({
-                "channelId": $('#channelId').val()
+            $.each(activityPayload.arguments.execute.inArguments = activityPayload.arguments.execute.inArguments, function(index, arg) {
+                if(arg.channelId != undefined) {
+                    arg.channelId = $('channelId').val();
+                }
             });
             console.log('activityPayload:');
             console.log(activityPayload);

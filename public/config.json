@@ -22,6 +22,8 @@
       "inArguments": [
         {
           "contactkey" : "{{Contact.Key}}"
+        },{
+          "channelId": ""
         }
       ],
       "outArguments": [],
