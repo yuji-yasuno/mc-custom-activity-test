@@ -6,8 +6,6 @@ require(['jquery', 'postmonger'], function ($, Postmonger) {
 
     var activityPayload = {};
 
-    //connection.trigger('updateButton', { button: 'next', text: 'done', visible: true });
-
     connection.on('initActivity', function (payload) {
         console.log('=== on initEvent ===');
         console.log('payload:');
