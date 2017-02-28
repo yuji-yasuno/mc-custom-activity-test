@@ -77,7 +77,7 @@ require(['jquery', 'postmonger'], function ($, Postmonger) {
             });
             */
             activityPayload.arguments.execute.inArguments = activityPayload.arguments.execute.inArguments = [{
-                "channelId" : $('channelId').val();
+                "channelId" : $('channelId').val()
             }];
             connection.trigger('updateActivity', activityPayload);
             console.log('activityPayload:');
