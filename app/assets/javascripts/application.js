@@ -74,7 +74,7 @@ require(['jquery', 'postmonger'], function ($, Postmonger) {
             $.each(activityPayload.arguments.execute.inArguments = activityPayload.arguments.execute.inArguments, function(index, arg) {
                 if(arg.channelId != undefined) {
                     arg.channelId = $('channelId').val();
-                    debugger;
+                    console.log('finish to set channelId');
                 }
             });
             /*
