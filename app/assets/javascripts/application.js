@@ -67,17 +67,19 @@ require(['jquery', 'postmonger'], function ($, Postmonger) {
             console.log('---  save channelid ---');
             activityPayload.arguments = activityPayload.arguments || {};
             activityPayload.arguments.execute = activityPayload.arguments.execute || {};
-            activityPayload.arguments.execute.inArguments = activityPayload.arguments.execute.inArguments || [];
             /*
+            activityPayload.arguments.execute.inArguments = activityPayload.arguments.execute.inArguments || [];
+
             $.each(activityPayload.arguments.execute.inArguments = activityPayload.arguments.execute.inArguments, function(index, arg) {
                 if(arg.channelId != undefined) {
                     arg.channelId = $('channelId').val();
                 }
             });
             */
-            activityPayload.arguments.execute.inArguments = activityPayload.arguments.execute.inArguments.push({
-                "channelId": $('channelId').val()
-            });
+            activityPayload.arguments.execute.inArguments = activityPayload.arguments.execute.inArguments = [{
+                "channelId" : $('channelId').val();
+            }];
+            connection.trigger('updateActivity', activityPayload);
             console.log('activityPayload:');
             console.log(activityPayload);
         });
