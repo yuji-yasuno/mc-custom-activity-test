@@ -67,8 +67,10 @@ require(['jquery', 'postmonger'], function ($, Postmonger) {
             console.log('---  save channelid ---');
             activityPayload.arguments = activityPayload.arguments || {};
             activityPayload.arguments.execute = activityPayload.arguments.execute || {};
-            activityPayload.arguments.execute.inArguments = activityPayload.arguments.execute.inArguments || {};
-            activityPayload.arguments.execute.inArguments.channelId = $('#channelId').val();
+            activityPayload.arguments.execute.inArguments = activityPayload.arguments.execute.inArguments || [];
+            activityPayload.arguments.execute.inArguments = activityPayload.arguments.execute.inArguments.push({
+                "channelId": $('#channelId').val()
+            });
             console.log('activityPayload:');
             console.log(activityPayload);
         });
