@@ -9,12 +9,12 @@
   "type": "REST",
   "lang": {
     "en-US": {
-      "name": "Send LINE",
-      "description": "Sending message via LINE"
+      "name": "Activity Label (English)",
+      "description": "Activity Description (Japanese)"
     },
     "ja": {
-      "name": "LINE送信",
-      "description": "LINEによる送信"
+      "name": "アクティビティラベル （日本語）",
+      "description": "アクティビティの説明 （日本語） "
     }
   },
   "arguments": {
@@ -25,43 +25,43 @@
         }
       ],
       "outArguments": [],
-      "url": "https://custom-activity-test.herokuapp.com/execute",
+      "url": "https://[ your app name ].herokuapp.com/execute",
       "verb": "POST",
       "useJwt": false,
       "timeout": 10000
     }
   },
   "configurationArguments": {
-    "applicationExtensionKey": "custom-activity-test.herokuapp.com",
+    "applicationExtensionKey": "Custom Activity Key set on Marketing Cloud App Center",
     "save": {
-      "url": "https://custom-activity-test.herokuapp.com/save",
+      "url": "https://[ your app name ].herokuapp.com/save",
       "verb": "POST",
       "useJwt": false
     },
     "publish": {
-      "url": "https://custom-activity-test.herokuapp.com/publish",
+      "url": "https://[ your app name ].herokuapp.com/publish",
       "verb": "POST",
       "useJwt": false
     },
     "unpublish": {
-      "url": "https://custom-activity-test.herokuapp.com/unpublish",
+      "url": "https://[ your app name ].herokuapp.com/unpublish",
       "verb": "POST",
       "useJwt": false
     },
     "validate": {
-      "url": "https://custom-activity-test.herokuapp.com/validate",
+      "url": "https://[ your app name ].herokuapp.com/validate",
       "verb": "POST",
       "useJwt": false
     },
     "stop": {
-      "url": "https://custom-activity-test.herokuapp.com/stop",
+      "url": "https://[ your app name ].herokuapp.com/stop",
       "verb": "POST",
       "useJwt": false
     }
   },
   "userInterfaces": {
     "configModal": {
-      "url": "https://custom-activity-test.herokuapp.com/",
+      "url": "https://[ your app name ].herokuapp.com/",
       "height": 480,
       "width": 600
     }
